@@ -61,7 +61,40 @@ public class SwapMeTest {
         int [] testResultsTwo = swapNeighbours(testSetTwo);
         assertArrayEquals(new int[] {3, 21, 7, 12, 8, 89}, testResultsTwo);
 
-
+        int [] testSetThree = {6, 5, 7, 17, 1, 3};
+        int [] testResultsThree = swapNeighbours(testSetThree);
+        assertArrayEquals(new int[] {5 ,6 , 7, 1, 3, 17}, testResultsThree);
     }
+    @Test
+    @Order(4)
+    public void bubbleLoopNumberShouldWork() {
 
+        int [] testSetOne = {5, 19, 7, 17, 6, 1, 3};
+        int [] testResultsOne = bubbleLoopNumber(testSetOne);
+        assertArrayEquals(new int[] {1 ,3 ,5 ,6, 7, 17, 19}, testResultsOne);
+
+        int[] testSetTwo = {89, 3, 21, 7, 12, 8 };
+        int [] testResultsTwo = bubbleLoopNumber(testSetTwo);
+        assertArrayEquals(new int[] {3, 7, 8, 12, 21, 89}, testResultsTwo);
+
+        int [] testSetThree = {6, 5, 7, 17, 1, 3};
+        int [] testResultsThree = bubbleLoopNumber(testSetThree);
+        assertArrayEquals(new int[] {1, 3 ,5 ,6 ,7, 17}, testResultsThree);
+    }
+    @Test
+    @Order(5)
+    public void selectionLoopNumberShouldWork() {
+
+        int [] testSetOne = {5, 19, 7, 17, 6, 1, 3};
+        int [] testResultsOne = selectionSortNumber(testSetOne);
+        assertArrayEquals(new int[] {1 ,3 ,5 ,6, 7, 17, 19}, testResultsOne);
+
+        int[] testSetTwo = {89, 3, 21, 7, 12, 8 };
+        int [] testResultsTwo = selectionSortNumber(testSetTwo);
+        assertArrayEquals(new int[] {3, 7, 8, 12, 21, 89}, testResultsTwo);
+
+        int [] testSetThree = {6, 5, 7, 17, 1, 3};
+        int [] testResultsThree = selectionSortNumber(testSetThree);
+        assertArrayEquals(new int[] {1, 3 ,5 ,6 ,7, 17}, testResultsThree);
+    }
 }
